@@ -63,7 +63,7 @@ export default {
   axios: {
     // proxy: true,
     /* baseURL: "http://localhost:8010/", */
-    baseURL: "http://ratingmovies-backend.herokuapp.com/api"
+    baseURL: "https://oldratingmovies.herokuapp.com/api"
   },
 
   /* proxy: {
