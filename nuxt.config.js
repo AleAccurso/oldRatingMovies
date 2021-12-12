@@ -66,9 +66,9 @@ export default {
     baseURL: "http://oldratingmovies-backend.herokuapp.com/"
   },
 
-  env :{
+  env: {
     baseURL: "http://oldratingmovies-backend.herokuapp.com/"
-  }
+  },
 
   /* proxy: {
           '/api': {
