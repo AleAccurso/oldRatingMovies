@@ -9,15 +9,15 @@
                 v-for="movie in movies" :key="movie.id"
                 cols="12"
                 sm="3"
-            >   
+            >
                 <v-card
                     class="mx-auto"
                     max-width="300"
                     shaped
-                >   
+                >
                     <div class="hover10">
                         <figure>
-                            <img class="w-100 h-auto imgMovieCard" :srcset="url+movie.poster_path" >
+                            <img class="w-100 h-auto imgMovieCard" :srcset="url+movie.poster" >
                             <v-rating v-if="isAuthenticated"
                                 class="favoriteMovie"
                                 hover
@@ -51,14 +51,14 @@
                         size="18"
                         :value= "movie.grade/2"
                         readonly
-                    ></v-rating> 
+                    ></v-rating>
                     </v-card-actions>
-                    
+
                     <div class="my-3 text-subtitle-1">
                         <svg style="width:20px;height:20px;color:#9042b4;" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
                         </svg>
-                        {{ movie.release_date.substring(0,4) }}
+                        {{ movie.date.substring(0,4) }}
                         </div>
                     <v-col
                         v-for="(item, i) in items"
@@ -105,7 +105,7 @@
                     </v-col>
                     </div>
                 </v-card>
-            </v-col> 
+            </v-col>
     </v-row>
     </v-container>
   </div>
@@ -113,7 +113,7 @@
 <script>
     import axios from "axios";
     const baseURL = "http://localhost:8010/api";
-    
+
   export default{
     data(){
       return {
@@ -151,7 +151,7 @@
             .patch(
                 baseURL +
                 "/movies/" +
-                id, { 
+                id, {
                 grade: value*2
             })
             .then(async (response) => {
