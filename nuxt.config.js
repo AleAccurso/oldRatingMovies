@@ -62,8 +62,8 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // proxy: true,
-    /* baseURL: "http://localhost:8010/", */
-    baseURL: "https://oldratingmovies-backend.herokuapp.com/api"
+    /* baseURL: "http://localhost:8010/" */
+    baseURL: "http://oldratingmovies-backend.herokuapp.com/"
   },
 
   /* proxy: {
