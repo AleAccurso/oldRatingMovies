@@ -1,5 +1,5 @@
 <template>
-<div> 
+<div>
     <v-container class="grey lighten-5 mainLogo">
       <img src="../../assets/logo_big.png">
     </v-container>
@@ -14,7 +14,7 @@
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name1" aria-describedby="name1" v-model="name">
             </div>
-            <div class="mb-3"> 
+            <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email">
             </div>
@@ -42,15 +42,16 @@ export default {
         name: "",
         email: "",
         isAdmin: "",
+        baseURL: process.env.baseURL
       }
     },
     // computed: {
     //   getterUserId(){
     //     this.$store.getters.getterUserId;
     //   }
-      
+
     // },
-    
+
     created(){
         let userUpdate = this.$store.getters.getUserById(this.$route.params.userId);
         this.name = userUpdate.name;
@@ -71,7 +72,7 @@ export default {
 
       // e.preventDefault();
         //     let userUp= {
-        //     name: this.name, 
+        //     name: this.name,
         //     email: this.email,
         //     isAdmin: this.isAdmin,
         //     };
@@ -83,8 +84,8 @@ export default {
         //         this.$router.push('/admin/users');
         // }
         this.$axios
-            .patch("http://localhost:8010/api/user/update/" + this.$route.params.userId, { 
-                name: this.name, 
+            .patch(this.baseURL + "/user/update/" + this.$route.params.userId, {
+                name: this.name,
                 email: this.email,
                 isAdmin: this.isAdmin,
             })
@@ -93,12 +94,12 @@ export default {
                 this.$router.push('/admin/users');
             });
         },
-        
+
     //   validEmail: function (email) {
     //   var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     //   return re.test(email);
     // }
-      
+
     }
 };
 </script>

@@ -33,6 +33,7 @@ export default {
         email: "",
         isAdmin: "",
         msg: "",
+        baseURL: process.env.baseURL,
         reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
       }
     },
@@ -55,8 +56,8 @@ export default {
         },
         updateUserLoaded(){
             this.$axios
-                .patch("http://localhost:8010/api/user/update/" + this.$route.params.userId, { 
-                    name: this.name, 
+                .patch(this.baseURL + "user/update/" + this.$route.params.userId, {
+                    name: this.name,
                     email: this.email,
                     isAdmin: this.isAdmin,
                 })

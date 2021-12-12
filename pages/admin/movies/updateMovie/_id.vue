@@ -99,8 +99,6 @@
 <script>
   import axios from "axios";
 
-  const baseURL = "http://localhost:8010/api/movies/";
-
 export default {
   data: () => ({
     title: '',
@@ -114,18 +112,19 @@ export default {
         value => !!value || 'Required.',
     ],
     movie: [],
+    baseURL: process.env.baseURL
   }),
   methods:{
     getMovie(){
         axios
-        .get(baseURL + this.$route.params.id)
+        .get(this.baseURL + this.$route.params.id)
         .then(async (response) => {
           this.movie = response.data;
         });
     },
    updateMovie(){
        axios
-        .patch(baseURL + this.$route.params.id, {
+        .patch(this.baseURL + this.$route.params.id, {
           title: this.title,
           genre: this.genre,
           grade: this.grade,
