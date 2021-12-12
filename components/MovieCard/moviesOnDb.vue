@@ -112,7 +112,6 @@
 </template>
 <script>
     import axios from "axios";
-    const baseURL = "http://localhost:8010/api";
 
   export default{
     data(){
@@ -138,6 +137,7 @@
         fullIcon: 'mdi-heart',
         sortBy: 'title',
         sortDirection: 'asc',
+        baseURL: process.env.baseURL
       }
     },
     computed: {
@@ -149,7 +149,7 @@
         rateMovie(value, id){
             axios
             .patch(
-                baseURL +
+                this.baseURL +
                 "/movies/" +
                 id, {
                 grade: value*2

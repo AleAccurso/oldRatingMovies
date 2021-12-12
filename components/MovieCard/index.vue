@@ -51,7 +51,6 @@
 
 <script>
   import axios from "axios";
-  const baseURL = "http://localhost:8010/api";
 
   export default{
     data(){
@@ -66,7 +65,8 @@
         director: '',
         overview: '',
         strGenre: '',
-        url: 'http://image.tmdb.org/t/p/w500'
+        url: 'http://image.tmdb.org/t/p/w500',
+        baseURL: process.env.baseURL
       }
     },
     computed :{
@@ -85,7 +85,7 @@
       },
       getInfo(id){
         axios
-            .post(baseURL + "/movies/" + id + "/getInfo")
+            .post(this.baseURL + "/movies/" + id + "/getInfo")
             .then(async(response) => {
               this.movieToAdd = response.data;
               this.addMovie();
@@ -93,7 +93,7 @@
       },
       addMovie(){
         axios
-            .post(baseURL + "/movies", this.movieToAdd)
+            .post(this.baseURL + "/movies", this.movieToAdd)
             .then(async(response) => {
               await this.$store.commit('ADD_MOVIE', this.movieToAdd);
               alert ("Movie successfully added");

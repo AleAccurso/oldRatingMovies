@@ -63,11 +63,11 @@
 
 <script>
 import axios from "axios";
-const baseURL = "http://localhost:8010/api";
 
 export default {
   data(){
     return {
+      baseURL: process.env.baseURL,
       headers: [
         {
           text: 'Title',
@@ -87,7 +87,7 @@ export default {
     deleteMovie(id){
       if(confirm("Still OK to delete this movie")){
         axios
-            .delete(baseURL + "/movies/delete/" + id)
+            .delete(this.baseURL + "/movies/delete/" + id)
             .then(async(response) => {
               await this.$store.commit('DELETE_MOVIE', id);
               alert ("Movie successfully deleted");

@@ -1,5 +1,3 @@
-const baseURL = "http://localhost:8010/api";
-
 const store = {
   state() {
     return {
@@ -96,7 +94,7 @@ const store = {
   actions: {
     async nuxtServerInit({ commit }) {
       const response = await this.$axios
-        .get(baseURL + "/movies")
+        .get(process.env.baseURL + "/movies")
         .then(response => {
           commit("GET_MOVIES", response.data);
         });
@@ -105,7 +103,7 @@ const store = {
     //user
     getUsers({ commit }) {
       this.$axios
-        .get(baseURL + "/users")
+        .get(process.env.baseURL + "/users")
         .then(response => {
           commit("GET_USERS", response.data);
         })
@@ -117,7 +115,7 @@ const store = {
     // updateUser({ commit }, id, {data}) {
     //     console.log(data);
     //     this.$axios
-    //         .patch(baseURL + "/user/update/" + id, {
+    //         .patch(process.env.baseURL + "/user/update/" + id, {
     //             data
     //         })
     //         .then(response => {
@@ -128,9 +126,11 @@ const store = {
     //         });
     // },
     deleteUser({ commit }, _id) {
-      this.$axios.delete(baseURL + "/user/delete/" + _id).then(response => {
-        commit("DELETE_USER", response.data);
-      });
+      this.$axios
+        .delete(process.env.baseURL + "/user/delete/" + _id)
+        .then(response => {
+          commit("DELETE_USER", response.data);
+        });
     }
   }
 };
