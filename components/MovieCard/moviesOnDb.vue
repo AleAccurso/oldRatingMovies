@@ -164,7 +164,7 @@
     }
 }
 </script>
-<style>
+<style scoped>
 .mainContainer{
     margin-top: 30px;
 }
@@ -175,6 +175,12 @@
 }
 .mx-auto{
     margin-bottom: 40px;
+}
+.imgMovieCard {
+  object-fit: cover;
+  min-height: 450px;
+  width: 100%;
+  height: auto;
 }
 .v-card__text{
     max-height: 200px;
