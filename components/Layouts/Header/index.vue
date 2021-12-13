@@ -25,7 +25,7 @@
           <v-tabs align-with-title class="navTab">
             <v-tab>
               <nuxt-link class="nav-link active" aria-current="page" to="/">
-              <svg style="width:18px;height:18px;margin-bottom:5px" viewBox="0 0 24 24">
+              <svg style="width:18px;height:18px;margin-top:5px" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M12,3L20,9V21H15V14H9V21H4V9L12,3Z" />
               </svg>
                 Home
@@ -58,7 +58,7 @@
                 My Profile
               </nuxt-link>
             </v-tab>
-            <v-tab v-if="getUserInfo.isAdmin == true"> 
+            <v-tab v-if="getUserInfo.isAdmin == true">
               <nuxt-link class="nav-link active" aria-current="page" to="/admin">
                 Admin
               </nuxt-link>
@@ -85,7 +85,7 @@
 export default {
   data() {
     return {
-      
+
     }
   },
   methods: {
@@ -109,12 +109,12 @@ export default {
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
-} 
+}
 .nav-link:focus{
   color: #9042b4;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
-} 
+}
 .v-tabs-slider {
     background-color: #9042b4;
     height: 100%;
