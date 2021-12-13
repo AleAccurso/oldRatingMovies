@@ -11,7 +11,7 @@
                 sm="3"
             >
                 <v-card
-                    class="mx-auto"
+                    class="mx-auto ms-2 me-2"
                     max-width="300"
                     shaped
                 >
@@ -175,9 +175,6 @@
 }
 .mx-auto{
     margin-bottom: 40px;
-}
-.v-card{
-  margin: 5px;
 }
 .v-card__text{
     max-height: 200px;
