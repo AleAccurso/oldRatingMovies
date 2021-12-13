@@ -25,10 +25,10 @@
           <v-tabs align-with-title class="navTab">
             <v-tab>
               <nuxt-link class="nav-link active" aria-current="page" to="/">
-              <svg style="width:18px;height:18px;" viewBox="0 0 24 24">
+              <svg style="width:18px;height:18px;margin-bottom:5px" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M12,3L20,9V21H15V14H9V21H4V9L12,3Z" />
               </svg>
-                <span class="mb-2">Home</span>
+                Home
               </nuxt-link>
             </v-tab>
             <v-tab>
@@ -134,8 +134,10 @@ export default {
 .logout{
   text-align: right;
 }
-.v-icon.v-icon.v-icon--link {
-  cursor: pointer;
-  outline: none;
+.imgMovieCard {
+  object-fit: cover;
+  min-height: 450px;
+  width: 100%;
+  height: auto;
 }
 </style>
