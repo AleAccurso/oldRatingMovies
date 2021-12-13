@@ -25,10 +25,10 @@
           <v-tabs align-with-title class="navTab">
             <v-tab>
               <nuxt-link class="nav-link active" aria-current="page" to="/">
-              <svg style="width:18px;height:18px;margin-top:5px" viewBox="0 0 24 24">
+              <svg style="width:18px;height:18px;" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M12,3L20,9V21H15V14H9V21H4V9L12,3Z" />
               </svg>
-                Home
+                <span class="mb-2">Home</span>
               </nuxt-link>
             </v-tab>
             <v-tab>
