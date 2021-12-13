@@ -183,7 +183,7 @@
   height: auto;
 }
 .v-card{
-  margin:10px;
+  margin:5px;
 }
 .v-card__text{
     max-height: 200px;
