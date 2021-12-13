@@ -31,7 +31,7 @@
                         </figure>
                     </div>
                     <div class="cardInfos">
-                    <v-card-title v-if="movie.title.length > 25">{{ movie.title.substring(0,22) }}...</v-card-title>
+                    <v-card-title v-if="movie.title.length > 25">{{ movie.title.substring(0,20) }}...</v-card-title>
                     <v-card-title v-else>{{ movie.title }}</v-card-title>
                     <v-card-actions class="pa-4">
                         <v-rating v-if="isAuthenticated"
