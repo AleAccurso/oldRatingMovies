@@ -140,4 +140,8 @@ export default {
   width: 100%;
   height: auto;
 }
+.v-icon.v-icon.v-icon--link {
+  cursor: pointer;
+  outline: none;
+}
 </style>
