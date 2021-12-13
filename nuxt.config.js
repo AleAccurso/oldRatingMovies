@@ -3,8 +3,8 @@ import colors from "vuetify/es5/util/colors";
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: "%s - ratingMovies",
-    title: "ratingMovies",
+    titleTemplate: "%s",
+    title: "Old Rating Movies",
     htmlAttrs: {
       lang: "en"
     },
@@ -96,9 +96,9 @@ export default {
         //        data: "refresh_token", // data can be used to set the name of the property you want to send in the request.
         //      },
         endpoints: {
-          login: { url: "/api/auth/login", method: "post" },
+          login: { url: "/auth/login", method: "post" },
           logout: false,
-          user: { url: "/api/auth/user", method: "get" }
+          user: { url: "/auth/user", method: "get" }
         }
       }
     }
