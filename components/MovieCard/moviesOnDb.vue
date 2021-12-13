@@ -11,7 +11,7 @@
                 sm="3"
             >
                 <v-card
-                    class="mx-auto"
+                    class="mx-auto mx-1"
                     max-width="300"
                     shaped
                 >
