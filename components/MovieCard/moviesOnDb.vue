@@ -182,6 +182,9 @@
   width: 100%;
   height: auto;
 }
+.v-card{
+  margin:10px;
+}
 .v-card__text{
     max-height: 200px;
     overflow: scroll;
