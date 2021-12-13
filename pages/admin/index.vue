@@ -74,7 +74,7 @@ export default {
     },
   }
 </script>
-<style scoped>
+<style>
 .mainLogo{
   margin-bottom: 30px;
 }

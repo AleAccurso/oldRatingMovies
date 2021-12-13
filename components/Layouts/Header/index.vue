@@ -104,7 +104,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .nav-link{
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;

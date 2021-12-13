@@ -12,7 +12,7 @@
                     class="mx-auto"
                     max-width="300"
                 >
-                <img class="w-100 h-auto imgMovieCard" :srcset="url+movie.poster_path" >
+                <img class="w-100 h-auto" :srcset="url+movie.poster_path" >
 
                 <v-card-title>{{ movie.title }}</v-card-title>
                 <v-card-text>
@@ -103,11 +103,3 @@
     },
   }
 </script>
-<style scoped>
-.imgMovieCard {
-  object-fit: cover;
-  min-height: 450px;
-  width: 100%;
-  height: auto;
-}
-</style>

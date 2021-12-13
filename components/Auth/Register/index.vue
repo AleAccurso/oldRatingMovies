@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .loginForm{
   width: 800px;
   padding: 50px;
