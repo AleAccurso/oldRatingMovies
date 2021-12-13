@@ -134,4 +134,8 @@ export default {
 .logout{
   text-align: right;
 }
+.v-icon.v-icon.v-icon--link {
+  cursor: pointer;
+  outline: none;
+}
 </style>
