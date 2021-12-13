@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s",
-    title: "Old Rating Movies",
+    title: "Rotten Tomato",
     htmlAttrs: {
       lang: "en"
     },
