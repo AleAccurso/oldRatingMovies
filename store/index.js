@@ -77,10 +77,6 @@ const store = {
 
     UPDATE_USER: (state, data) => {
       let index = state.users.findIndex(obj => obj.id == data["id"]);
-
-      console.log("Store - update_user - index: ", index);
-      console.log("Store - update_user - data: ", data);
-
       state.users[index] = data;
     },
 

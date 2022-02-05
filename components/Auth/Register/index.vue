@@ -65,7 +65,7 @@ export default {
   methods: {
     async register() {
       try {
-        const user = await this.$axios.$post("/api/auth/signin", {
+        const user = await this.$axios.$post("/auth/signin", {
           name: this.registerData.name,
           email: this.registerData.email,
           password: this.registerData.password
